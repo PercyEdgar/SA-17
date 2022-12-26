@@ -1,0 +1,32 @@
+//Crear usuario
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Jose Teran",
+    "age": 20,
+    "email": "JoseTeran@gmail.com" 
+}
+//Obtener todo los datos
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+//Seleccionar uno solo
+###
+GET http://localhost:9000/api/users/63a5c8fa0603f8cf3f506a4b HTTP/1.1
+
+//Editar uno solo usuario
+###
+PUT http://localhost:9000/api/users/63a5c8fa0603f8cf3f506a4b HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "George Mendel",
+    "age": 81,
+    "email": "GeorgeMendel@email.com" 
+}
+
+//Borrar uno solo usuario
+###
+DELETE  http://localhost:9000/api/users/63a5d26e84ca693b56d4a518 HTTP/1.1
